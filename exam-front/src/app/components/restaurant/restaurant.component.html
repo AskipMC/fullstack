@@ -1,0 +1,6 @@
+<p>Liste des restaurants : </p>
+<app-restaurant-display  [restaurants]="restaurants"></app-restaurant-display>
+
+<BR/> 
+
+<app-add-restaurant-form (restaurantSubmitted)="onRestaurantSubmitted($event)"></app-add-restaurant-form>

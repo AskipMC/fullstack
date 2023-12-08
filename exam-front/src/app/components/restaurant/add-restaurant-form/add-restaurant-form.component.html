@@ -1,0 +1,17 @@
+Ajouter un restaurant : 
+<form #addRestaurantForm="ngForm" (ngSubmit)="submit(addRestaurantForm)">
+    <div>
+      Nom : <input #nom="ngModel" type="text" name="nom" [(ngModel)]="formData.nom" [maxlength]="90" [required]="true"/>
+      <BR/>Adresse : <input #adresse="ngModel" type="text" name="adresse" [(ngModel)]="formData.adresse" [maxlength]="255" [required]="true"/>
+      <BR/>Tags : 
+      <BR/>Gastronomique <input type="checkbox" id="tags" name="Gastronomique" value="Gastronomique">
+      <BR/>Bistrot <input type="checkbox" id="Bistrot" name="Bistrot" value="Bistrot">
+      <BR/>Bistronomique <input type="checkbox" id="Bistronomique" name="Bistronomique" value="Bistronomique">
+      <BR/>Brasserie <input type="checkbox" id="Brasserie" name="Brasserie" value="Brasserie">
+      <BR/>Fastfood <input type="checkbox" id="Fastfood" name="Fastfood" value="Fastfood">
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  

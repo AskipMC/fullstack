@@ -1,0 +1,12 @@
+<div *ngIf="restaurant">
+    <span>Nom : {{restaurant.nom}}</span>
+    <span>Adresse : {{restaurant.adresse}}</span>
+    <span>Evaluations : </span>
+    <div *ngFor="let evaluation of restaurant.evaluations">
+        <span>Auteur : {{evaluation.auteur}}</span>
+        <span>Commentaire : {{evaluation.commentaire}} </span>
+        <span>Nombre étoile : {{evaluation.note}} </span>
+        <button (click)="deleteEvaluation(evaluation.id)">Supprimer</button>
+    </div>
+</div>
+

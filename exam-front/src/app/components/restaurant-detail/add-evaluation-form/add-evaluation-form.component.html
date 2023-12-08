@@ -1,0 +1,12 @@
+Ajouter une evaluation : 
+<form #addEvaluationForm="ngForm" (ngSubmit)="submit(addEvaluationForm)">
+    <div>
+      Auteur : <input #auteur="ngModel" type="text" name="auteur" [(ngModel)]="formData.auteur" [maxlength]="50" [required]="true"/>
+      Commentaire : <input #commentaire="ngModel" type="text" name="commentaire" [(ngModel)]="formData.commentaire" [maxlength]="255" [required]="true"/>
+      Note : <input #note="ngModel" type="number" name="note" [(ngModel)]="formData.note" min="0" max="3" [required]="true"/>
+    </div>
+      <div>
+      <button type="submit">Submit</button>
+    </div>
+</form>
+  

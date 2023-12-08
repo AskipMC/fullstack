@@ -1,0 +1,27 @@
+<table>
+    <tr>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Moyenne</th>
+      <th>Détails</th>
+      <th>Note finale</th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants" restaurantColored="{{restaurant.moyenne}}">
+      <td>
+        {{restaurant.nom}}
+      </td>
+      <td>
+        {{restaurant.adresse}}
+      </td>
+      <td>
+        {{restaurant.moyenne == -1 ? "/" : restaurant.moyenne}}
+      </td>
+      <td>
+        <button [routerLink]="'/restaurants/' + restaurant.id">Détails</button>
+      </td>
+      <td>
+        {{restaurant.notefinale == -1 ? "/" : restaurant.notefinale}}
+      </td>
+    </tr>
+  </table>
+  
